@@ -1,0 +1,44 @@
+/* Inheritance - font family size to 18px - target: body*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+/* Multiple elements - header and footer with same background colour */
+header,footer{
+    background-color:plum;
+}
+/* Class selector - class of site-title colour of text of the heading */
+.site-title{
+    color:darkslateblue;
+}
+/* Id selector - image with a box-shadow with 0 horizontal and vertical placement, 2px of the blur, 1px of the spread and black colour */
+#my-image{
+    box-shadow:0px 0px 2px 1px black ;
+}
+/* Replacing the bullets from the list of hobbies with squares */
+ul.my-hobbies{
+    list-style-type: square;
+}
+/*nth-child selector - add a background to the odd list items in the hobby list */
+ul.my-hobbies{
+    li:nth-child(odd) {
+        background-color: aqua;
+      }
+}
+/* Styling the Navigation
+Remove the bullets from the unordered list in navigation (only if you have used the ul tag inside the nav tag) 
+Remove the underline from the links
+Add a background and border to the links
+Change the background colour on hover or focus state of the links */
+nav ul{
+    list-style-type: none;
+}
+nav a{
+    text-decoration:none;
+    background-color:lightpink;
+    border: 1px solid purple;
+}
+
+nav a:hover,a:focus{
+        background-color:antiquewhite;
+    }
