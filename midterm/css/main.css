@@ -1,11 +1,17 @@
 /* ================ global values =================== */
-/* define the calculation of width and height of the elements including content, padding and border*/
-* {
+/* setting the box-sing: defines the calculation of width and height of the elements including content, padding and border */
+html {
     box-sizing: border-box;
+  }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 /* ================ body =================== */
-/* general rules for all elements inside body */
+/* defines general rules for child elements inside body */
 body {
     background-color: #aad4cf;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,84 +21,101 @@ body {
     padding-bottom: 15px; 
 }
 
-
-article, aside, section {
+article, 
+aside, 
+section {
     padding: 0px 10px; /* define an overal aligment for the elements*/
 }
 
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 28px; 
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+p {
+    line-height: 20px;
+}
+
 /* ================ main wrapper =================== */
-/* set max width on the body content*/
+/* set max width on the wrapper content for body elements*/
 .main-wrapper {
+    background-color: #d4e9e7;
     max-width: 1024px;
     margin: 0 auto;
-    background-color: #d4e9e7;
     top: 0px;
 }
 
 /* ================ header =================== */
 /* set the general properties for the header element */
 header {
-    width: 100%;
-    text-align: center;
     background-color: #d4e9e7;
     color: black;
-    left: 0;
-    /* check */
-    /* padding-bottom: 10px; */
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
     height: 400px;
 }
 
 /* position the heading on top of the image in the header */
 header h1 {
-    position: relative;
     color: white;
-    /* check */
-    /* position: absolute; */
-    top: -150px;
+    margin: 0;
+    position: relative;
+    top: -170px;
 }
 
 /* ================ nav menu =================== */
-/* check- move the navigation bar */
+/* moves the navigation bar  */
 nav {
     position: relative;
-    top: -50px
-}
-
-/* make text appear in all-uppercase in navigation menu, remove bullets from list and apply in-line alignment to the list items */
-nav ul li {
-    width: 300px;
-    /* margin-left: 0; */
-    text-transform: uppercase;
-    list-style-type: none;
-    display: inline-block;
-    border-right: 1px solid black;
-    /* padding: 0 130px 0px 130px; */
-    /* check */
-    /* background-color: red; */
-}
-
-/* remove the right border of the last option of the menu*/
-nav ul li:last-child {
-    border-right: none;
+    top: -70px
 }
 
 nav a {
     text-decoration: none;
+    color: black;
+}
+
+/* makes text appear in all-uppercase in navigation menu, remove bullets from list and apply in-line alignment to the list items */
+nav ul li {
+    border-right: 1px solid black;
+    display: inline-block;
+    font-size: 22px;
+    list-style-type: none;
+    padding: 0 100px;
+    text-transform: uppercase;
+}
+
+/* removes the right border of the last option of the menu*/
+nav ul li:last-child {
+    border-right: none;
 }
 
 /* ================ article =================== */
-/* Image should have the text wrapping around it */
+/* creates the text wrapping around the image */
 .wrapper-article img {
     width: 257px;
     height: 257px;
     float: left;
-    margin: 0 20px 0 0;
-    background-color: red;
+    margin: 0 20px 10px 0;
 }
 
-/* after wrpaping content, add generative content to continue with the flow document*/
+/* after wraping content, adds generative content to continue with the flow document*/
 .clearfix:after {
-    content: ""; 
+    content: " "; 
     display:block;
 }
 
@@ -108,18 +131,19 @@ form {
     border: 1px solid black;
     padding: 20px;
 }
-/* set standart height for all the inputs inside the form */
+
+/* standart height for all the inputs inside the form */
 form input {
     height: 30px;
 }
 
-form input, form textarea {
-    /* check */
-    /* display: block; */
+form input, 
+form textarea {
     width: 100%;
     border: 1px solid grey;
 }
-/* add distribution between the elements in the form */
+
+/* adds distribution between the elements in the form(separation) */
 form div {
     margin-bottom: 15px;
 }
@@ -130,36 +154,25 @@ textarea {
 
 /* set radios dimensions */
 .wrapper-radio input {
-    /* check */
-    /* display: inline; */
     width: 50px;
     height: 15px;
 }
 
-/* check */
-/* .wrapper-radio label {
-    position: relative;
-    top: -3px;
-} */
-
-
-/* bottom with background, specific dimensions and make text appear in all-uppercase*/
+/* button with background, specific dimensions and make text appear in all-uppercase*/
 button {
     text-transform: uppercase;
     border: 1px solid;
     background-color: #d4e9e7;
-    height: 40px;
-    width: 55px;
+    padding: 10px 10px;
 }
 
 /* ================ footer =================== */
 footer {
-    height: 90px;
-    padding: 40px 20px 0 0;
+    padding: 30px 20px;
 }
+
 /* position the copyright to the left */
 .copyright {
-    /* position: fixed; */
     bottom: 0;
     right: 0;
     text-align: right;
