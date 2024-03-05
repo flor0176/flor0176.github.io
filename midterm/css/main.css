@@ -1,30 +1,32 @@
+/* css validated */
 /* ================ global values =================== */
 /* setting the box-sing: defines the calculation of width and height of the elements including content, padding and border */
 html {
     box-sizing: border-box;
-  }
+}
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 /* ================ body =================== */
-/* defines general rules for child elements inside body */
+/* defines general rules for child elements within the body */
 body {
     background-color: #aad4cf;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 0px;
     position: relative;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
 }
 
-article, 
-aside, 
+article,
+aside,
 section {
-    padding: 0px 10px; /* define an overal aligment for the elements*/
+    /* defines an overall alignment to the left for the elements */
+    padding: 0px 10px;
 }
 
 h1 {
@@ -32,7 +34,7 @@ h1 {
 }
 
 h2 {
-    font-size: 28px; 
+    font-size: 28px;
 }
 
 h3 {
@@ -46,11 +48,11 @@ h3 {
 }
 
 p {
-    line-height: 20px;
+    line-height: 22px;
 }
 
 /* ================ main wrapper =================== */
-/* set max width on the wrapper content for body elements*/
+/* sets max-width on the wrapper that contains the body elements*/
 .main-wrapper {
     background-color: #d4e9e7;
     max-width: 1024px;
@@ -59,10 +61,10 @@ p {
 }
 
 /* ================ header =================== */
-/* set the general properties for the header element */
+/* general properties for the header element */
 header {
     background-color: #d4e9e7;
-    color: black;
+    color: #000;
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
@@ -71,14 +73,14 @@ header {
 
 /* position the heading on top of the image in the header */
 header h1 {
-    color: white;
+    color: #fff;
     margin: 0;
     position: relative;
     top: -170px;
 }
 
 /* ================ nav menu =================== */
-/* moves the navigation bar  */
+/* positions the navigation bar from its original position to the top without affecting the order of the other elements  */
 nav {
     position: relative;
     top: -70px
@@ -86,17 +88,17 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
-/* makes text appear in all-uppercase in navigation menu, remove bullets from list and apply in-line alignment to the list items */
+/* makes text appear in all-uppercase in the navigation menu, removes bullets from the list and applies in-line alignment to the list items */
 nav ul li {
-    border-right: 1px solid black;
+    border-right: 1px solid #000;
     display: inline-block;
     font-size: 22px;
     list-style-type: none;
-    padding: 0 100px;
     text-transform: uppercase;
+    width: 320px;
 }
 
 /* removes the right border of the last option of the menu*/
@@ -108,39 +110,39 @@ nav ul li:last-child {
 /* creates the text wrapping around the image */
 .wrapper-article img {
     width: 257px;
-    height: 257px;
     float: left;
-    margin: 0 20px 10px 0;
+    margin-right: 20px;
+    margin-bottom: 15px;
 }
 
-/* after wraping content, adds generative content to continue with the flow document*/
+/* after wrapping content using the float property, adds generative content to prevent overlapping of the next elements and to continue with the flow document*/
 .clearfix:after {
-    content: " "; 
-    display:block;
+    content: " ";
+    display: block;
 }
 
 /* ================ unordered list =================== */
-/* align the bullet points to the left*/
+/* aligns the bullet points to the left*/
 aside ul {
     padding: 0px 20px;
 }
 
 /* ================ form =================== */
-/* set general style for the form element */
+/* sets general style for the form element */
 form {
-    border: 1px solid black;
+    border: 1px solid #000;
     padding: 20px;
 }
 
-/* standart height for all the inputs inside the form */
+/* standard height for all the inputs inside the form */
 form input {
     height: 30px;
 }
 
-form input, 
+form input,
 form textarea {
     width: 100%;
-    border: 1px solid grey;
+    border: 1px solid #808080;
 }
 
 /* adds distribution between the elements in the form(separation) */
@@ -152,13 +154,13 @@ textarea {
     height: 100px;
 }
 
-/* set radios dimensions */
+/* sets radios dimensions */
 .wrapper-radio input {
     width: 50px;
     height: 15px;
 }
 
-/* button with background, specific dimensions and make text appear in all-uppercase*/
+/* sets dimensions for the button and makes text appear in all-uppercase */
 button {
     text-transform: uppercase;
     border: 1px solid;
@@ -171,7 +173,7 @@ footer {
     padding: 30px 20px;
 }
 
-/* position the copyright to the left */
+/* moves the copyright to the left */
 .copyright {
     bottom: 0;
     right: 0;
