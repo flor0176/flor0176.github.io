@@ -43,7 +43,8 @@ h3 {
 
 h1,
 h2,
-h3 {
+h3, 
+h4 {
     font-weight: normal;
 }
 
@@ -55,7 +56,7 @@ p {
 /* sets max-width on the wrapper that contains the body elements*/
 .main-wrapper {
     background-color: #d4e9e7;
-    max-width: 1024px;
+    width: 1024px;
     margin: 0 auto;
     top: 0px;
 }
@@ -83,12 +84,16 @@ header h1 {
 /* positions the navigation bar from its original position to the top without affecting the order of the other elements  */
 nav {
     position: relative;
-    top: -70px
+    top: -70px;
 }
 
 nav a {
     text-decoration: none;
     color: #000;
+}
+/* removes the default padding of the unordered list on the left*/
+nav ul {
+    padding-left:0px ;
 }
 
 /* makes text appear in all-uppercase in the navigation menu, removes bullets from the list and applies in-line alignment to the list items */
@@ -98,7 +103,7 @@ nav ul li {
     font-size: 22px;
     list-style-type: none;
     text-transform: uppercase;
-    width: 320px;
+    width: 325px;
 }
 
 /* removes the right border of the last option of the menu*/
